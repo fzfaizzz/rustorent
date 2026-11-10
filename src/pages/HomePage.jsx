@@ -58,7 +58,7 @@ export default function HomePage({ addToCart }) {
             <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1, delay: 0.2 }} className="relative flex items-center justify-center">
               <div className="relative w-full max-w-md mx-auto">
                 <motion.div animate={{ rotate: 360 }} transition={{ duration: 40, repeat: Infinity, ease: "linear" }} className="absolute -inset-4 rounded-full border border-white/10 border-dashed" />
-                <img src="/images/hero.png" alt="Veg Platter" className="w-full h-auto object-cover rounded-full shadow-[0_0_50px_rgba(255,122,0,0.15)] animate-glow" />
+                <img src="./images/hero.png" alt="Veg Platter" className="w-full h-auto object-cover rounded-full shadow-[0_0_50px_rgba(255,122,0,0.15)] animate-glow" />
               </div>
               <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1 }} className="absolute -bottom-6 left-1/2 -translate-x-1/2 lg:-left-8 lg:translate-x-0 bg-dark-card/90 backdrop-blur-md p-5 rounded-xl border border-white/10 shadow-2xl w-56">
                 <h3 className="font-serif text-sm mb-3 border-b border-white/10 pb-2">Experience</h3>
@@ -147,7 +147,7 @@ export default function HomePage({ addToCart }) {
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="flex-1 relative">
               <div className="absolute inset-0 bg-primary/15 rounded-2xl blur-3xl -z-10 translate-x-4 translate-y-4" />
-              <img src="/images/waiter.png" alt="Fine Dining" className="w-full rounded-2xl object-cover shadow-2xl border border-white/10 max-h-[550px]" />
+              <img src="./images/waiter.png" alt="Fine Dining" className="w-full rounded-2xl object-cover shadow-2xl border border-white/10 max-h-[550px]" />
             </motion.div>
           </div>
         </div>
@@ -155,7 +155,7 @@ export default function HomePage({ addToCart }) {
 
       {/* ═══════════ LUXURY DINING ═══════════ */}
       <section className="relative py-32 border-t border-white/5 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/images/ambient.png')` }} />
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('./images/ambient.png')` }} />
         <div className="absolute inset-0 bg-dark/80 backdrop-blur-sm" />
         <div className="relative z-10 max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-16 text-center flex flex-col items-center">
           <motion.div {...fadeUp} className="bg-dark/50 border border-white/10 p-12 md:p-16 rounded-2xl shadow-2xl backdrop-blur-md max-w-3xl">
@@ -179,9 +179,9 @@ export default function HomePage({ addToCart }) {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { name: "Chef Suresh", role: "Head Chef", desc: "15 years of mastery in vegetarian fine dining.", image: "/images/chef-suresh.png" },
-              { name: "Chef Meena", role: "Chinese Specialist", desc: "Expert in Indo-Chinese fusion flavors.", image: "/images/chef-meena.png" },
-              { name: "Chef Arjun", role: "Tandoor Master", desc: "Creating perfectly charred paneer and breads.", image: "/images/chef-arjun.png" },
+              { name: "Chef Suresh", role: "Head Chef", desc: "15 years of mastery in vegetarian fine dining.", image: "./images/chef-suresh.png" },
+              { name: "Chef Meena", role: "Chinese Specialist", desc: "Expert in Indo-Chinese fusion flavors.", image: "./images/chef-meena.png" },
+              { name: "Chef Arjun", role: "Tandoor Master", desc: "Creating perfectly charred paneer and breads.", image: "./images/chef-arjun.png" },
             ].map((chef, i) => (
               <motion.div key={chef.name} {...fadeUp} transition={{ delay: i * 0.1 }} className="relative card overflow-hidden group h-96">
                 <img src={chef.image} alt={chef.name} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />

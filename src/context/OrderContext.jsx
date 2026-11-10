@@ -40,7 +40,7 @@ export const OrderProvider = ({ children }) => {
     const playNotificationSound = () => {
       try {
         const audio = new Audio();
-        audio.src = '/images/faaah.mp3';
+        audio.src = './images/faaah.mp3';
         audio.volume = 1.0; // Full volume as requested
         const playPromise = audio.play();
         if (playPromise !== undefined) {
